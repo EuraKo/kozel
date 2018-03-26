@@ -1,20 +1,58 @@
 <!-- kozel b_main/b_2_foodBox.html -->
-<div id="foodBox">
-  <ul>
-    <li>
-      <div class="img"></div>
-    </li>
-    <li>
-      <div class="img"></div>
-    </li>
-    <li>
-      <div class="img"></div>
-    </li>
-    <li>
-      <div class="img"></div>
-    </li>
-    <li>
-      <div class="img"></div>
-    </li>
-  </ul>
+<div id="titleBox">
+  <h2>new menu</h2>
 </div>
+<div id="foodBox">
+  <div class="slide_area">
+    <ul class="clearfix">
+      <li class="img_01">
+        <div></div>
+      </li>
+      <li class="img_02">
+        <div></div>
+      </li>
+      <li class="img_03">
+        <div></div>
+      </li>
+      <li class="img_04">
+        <div></div>
+      </li>
+      <li class="img_05">
+        <div></div>
+      </li>
+    </ul>
+  </div>
+  </div>
+  <script>
+    (function($) {
+      var slideArea = $('.slide_area').children('ul');
+      slideArea.children().last().clone().appendTo(slideArea);
+      var slideLi = slideArea.children('li');
+
+
+      var autoSlide;
+      var goSlide = function(){ 
+        autoSlide = setInterval(function(){
+          slideLi.first().appendTo(slideArea);
+          slideLi = slideArea.children('li');
+        },3000);
+      };
+      var stopSlide = clearInterval(autoSlide);
+      
+      goSlide();
+
+      // slideLi.on({'mouseenter':goSlide,'mouseleave':stopSlide});
+
+    })(this.jQuery);
+  </script>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,52 @@
+/*c_1_introduce.scss*/
+#wrap { width: 100%; min-width: 960px; height: auto; margin: 0 auto; position: relative; }
+
+#headBox { width: 100%; height: auto; background-image: url("../img/wood.png"); background-repeat: no-repeat; background-position: center; background-size: cover; padding: 30px; box-sizing: border-box; position: relative; }
+
+#headBox h1 { width: 150px; height: 160px; float: left; background-image: url("../img/kozel_logo.png"); background-repeat: no-repeat; background-position: center; background-size: contain; }
+
+#headBox #gnbBox { width: 80%; float: right; position: absolute; bottom: 30px; right: -30px; }
+
+#headBox #gnbBox ul li { width: 120px; margin-right: 50px; float: left; font-family: "IM FELL Great Primer", arial; text-transform: uppercase; }
+
+#headBox #gnbBox ul li.franchiese { width: 200px; }
+
+#headBox #gnbBox ul li dl { height: auto; }
+
+#headBox #gnbBox ul li dl dt { font-style: italic; font-size: 30px; font-size: 1.875rem; text-shadow: 0 2px 4px #160000; }
+
+#headBox #gnbBox ul li dl .depth { display: none; position: absolute; left: -210px; width: 960px; height: 120px; background-color: #ffffff; }
+
+#headBox #gnbBox ul li dl .depth dd { width: 200px; margin: auto; display: inline-block; text-align: center; line-height: 120px; }
+
+#headBox #gnbBox ul li:hover .depth { display: block; }
+
+#bigTitleBox { width: 100%; height: 600px; font-size: 48px; font-size: 3rem; color: #ffffff; font-family: "IM FELL Great Primer", arial; text-shadow: 0 2px 4px #160000; text-transform: uppercase; text-align: center; line-height: 600px; }
+
+.introTit { background-image: url("../img/title/intro_title.png"); background-repeat: no-repeat; background-position: center; background-size: cover; }
+
+#introduceBox { padding: 30px; box-sizing: border-box; }
+
+#introduceBox .intro { width: 660px; height: 500px; margin-bottom: 90px; }
+
+#introduceBox .intro:nth-child(2) { float: right; text-align: right; }
+
+#introduceBox .intro img { width: 100%; height: 100%; margin-bottom: 30px; }
+
+#introduceBox .intro figcaption { display: block; }
+
+#titleBox { width: 100%; background-image: url("../img/title/title.png"); background-repeat: no-repeat; background-position: center; background-size: cover; }
+
+#titleBox h2 { font-size: 48px; font-size: 3rem; text-align: center; }
+
+#titleBox.main_02 { background-image: url("../img/title/main_02.png"); background-repeat: no-repeat; background-position: center; background-size: 100% 100%; }
+
+#titleBox.main_02 h2 { color: #ffffff; }
+
+#footBox { width: 100%; height: auto; background-image: url("../img/wood.png"); background-repeat: no-repeat; background-position: center; background-size: cover; position: relative; }
+
+#footBox h2 { width: 115px; height: 54px; background-image: url("../img/flogo.png"); background-repeat: no-repeat; background-position: center; background-size: contain; position: absolute; bottom: 70px; right: 70px; }
+
+#footBox .text_area { padding: 70px; box-sizing: border-box; }
+
+#footBox .text_area p { margin-bottom: 20px; }
