@@ -1,0 +1,60 @@
+/*f_1_seach.scss*/
+#wrap { width: 100%; min-width: 960px; height: auto; margin: 0 auto; position: relative; }
+
+#headBox { width: 100%; height: auto; background-image: url("../img/wood.png"); background-repeat: no-repeat; background-position: center; background-size: cover; padding: 30px; box-sizing: border-box; position: relative; }
+
+#headBox h1 { width: 150px; height: 160px; float: left; background-image: url("../img/kozel_logo.png"); background-repeat: no-repeat; background-position: center; background-size: contain; }
+
+#headBox #gnbBox { width: 80%; float: right; position: absolute; bottom: 30px; right: -30px; }
+
+#headBox #gnbBox ul li { width: 120px; margin-right: 50px; float: left; font-family: "IM FELL Great Primer", arial; text-transform: uppercase; }
+
+#headBox #gnbBox ul li.franchiese { width: 200px; }
+
+#headBox #gnbBox ul li dl { height: auto; }
+
+#headBox #gnbBox ul li dl dt { font-style: italic; font-size: 30px; font-size: 1.875rem; text-shadow: 0 2px 4px #160000; }
+
+#headBox #gnbBox ul li dl .depth { display: none; position: absolute; left: -210px; z-index: 500; width: 960px; height: 120px; background-color: #ffffff; }
+
+#headBox #gnbBox ul li dl .depth dd { width: 200px; margin: auto; display: inline-block; text-align: center; line-height: 120px; }
+
+#headBox #gnbBox ul li:hover .depth { display: block; }
+
+#searchBox { width: 100%; height: 50vw; background-color: #ccc; position: relative; }
+
+#searchBox .map { width: 100%; height: 100%; }
+
+#searchBox .search_area { width: 40%; height: 100%; position: absolute; right: 0; top: 0; padding: 60px; box-sizing: border-box; }
+
+#searchBox .search_area fieldset { height: 90px; display: flex; text-indent: 30px; }
+
+#searchBox .search_area fieldset label { width: 100%; height: 90px; float: left; background-color: #562D0D; color: #ffffff; line-height: 90px; }
+
+#searchBox .search_area fieldset select { width: 100%; height: 90px; float: left; background-color: rgba(255, 255, 255, 0.5); text-indent: inherit; }
+
+#informationBox { width: 100%; height: auto; padding: 90px; box-sizing: border-box; }
+
+#informationBox dl { width: 100%; height: 100%; font-family: nanumGothic, "nanum Gothic", dotum; font-size: 30px; font-size: 1.875rem; }
+
+#informationBox dl dt { font-size: 48px; font-size: 3rem; margin-bottom: 60px; }
+
+#informationBox dl dd { font-family: fontAwesome; margin-bottom: 30px; }
+
+#informationBox dl dd:before { display: inline-block; width: 45px; height: 45px; font-size: 45px; margin-right: 30px; color: #562D0D; }
+
+#informationBox dl dd:first-of-type:before { content: "\f2a0"; }
+
+#informationBox dl dd:last-of-type:before { content: "\f015"; }
+
+#topBtn { width: 100%; height: 75px; }
+
+#topBtn a { background-image: url("../img/footer_arrow.png"); background-repeat: no-repeat; background-position: center; background-size: contain; }
+
+#footBox { width: 100%; height: auto; background-image: url("../img/wood.png"); background-repeat: no-repeat; background-position: center; background-size: cover; position: relative; }
+
+#footBox h2 { width: 115px; height: 54px; background-image: url("../img/flogo.png"); background-repeat: no-repeat; background-position: center; background-size: contain; position: absolute; bottom: 70px; right: 70px; }
+
+#footBox .text_area { padding: 70px; box-sizing: border-box; }
+
+#footBox .text_area p { margin-bottom: 20px; }

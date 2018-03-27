@@ -1,0 +1,52 @@
+/*d_menu.scss*/
+#wrap { width: 100%; min-width: 960px; height: auto; margin: 0 auto; position: relative; }
+
+#headBox { width: 100%; height: auto; background-image: url("../img/wood.png"); background-repeat: no-repeat; background-position: center; background-size: cover; padding: 30px; box-sizing: border-box; position: relative; }
+
+#headBox h1 { width: 150px; height: 160px; float: left; background-image: url("../img/kozel_logo.png"); background-repeat: no-repeat; background-position: center; background-size: contain; }
+
+#headBox #gnbBox { width: 80%; float: right; position: absolute; bottom: 30px; right: -30px; }
+
+#headBox #gnbBox ul li { width: 120px; margin-right: 50px; float: left; font-family: "IM FELL Great Primer", arial; text-transform: uppercase; }
+
+#headBox #gnbBox ul li.franchiese { width: 200px; }
+
+#headBox #gnbBox ul li dl { height: auto; }
+
+#headBox #gnbBox ul li dl dt { font-style: italic; font-size: 30px; font-size: 1.875rem; text-shadow: 0 2px 4px #160000; }
+
+#headBox #gnbBox ul li dl .depth { display: none; position: absolute; left: -210px; z-index: 500; width: 960px; height: 120px; background-color: #ffffff; }
+
+#headBox #gnbBox ul li dl .depth dd { width: 200px; margin: auto; display: inline-block; text-align: center; line-height: 120px; }
+
+#headBox #gnbBox ul li:hover .depth { display: block; }
+
+#menuBox { width: 100%; height: 540px; padding: 60px; box-sizing: border-box; background-image: url("../img/bg_town.png"); background-repeat: no-repeat; background-position: center; background-size: contain; }
+
+#menuBox ul { width: 50%; height: 100%; float: left; position: relative; }
+
+#menuBox ul.menu_title { text-transform: uppercase; font-family: "IM FELL Great Primer", arial; font-size: 36px; font-size: 2.25rem; }
+
+#menuBox ul.menu_title li { margin-bottom: 50px; }
+
+#menuBox ul.menu_pic li { width: 100%; height: 100%; position: absolute; top: 0; }
+
+#menuBox ul.menu_pic li:nth-of-type(1) { background-image: url("../img/menu/menu_01.png"); background-repeat: no-repeat; background-position: center; background-size: contain; }
+
+#menuBox ul.menu_pic li:nth-of-type(2) { background-image: url("../img/menu/menu_02.png"); background-repeat: no-repeat; background-position: center; background-size: contain; }
+
+#menuBox ul.menu_pic li:nth-of-type(3) { background-image: url("../img/menu/menu_03.png"); background-repeat: no-repeat; background-position: center; background-size: contain; }
+
+#menuBox ul.menu_pic li:nth-of-type(4) { background-image: url("../img/menu/menu_04.png"); background-repeat: no-repeat; background-position: center; background-size: contain; }
+
+#topBtn { width: 100%; height: 75px; }
+
+#topBtn a { background-image: url("../img/footer_arrow.png"); background-repeat: no-repeat; background-position: center; background-size: contain; }
+
+#footBox { width: 100%; height: auto; background-image: url("../img/wood.png"); background-repeat: no-repeat; background-position: center; background-size: cover; position: relative; }
+
+#footBox h2 { width: 115px; height: 54px; background-image: url("../img/flogo.png"); background-repeat: no-repeat; background-position: center; background-size: contain; position: absolute; bottom: 70px; right: 70px; }
+
+#footBox .text_area { padding: 70px; box-sizing: border-box; }
+
+#footBox .text_area p { margin-bottom: 20px; }

@@ -2,8 +2,7 @@
 <div id="titleBox">
   <h2>new menu</h2>
 </div>
-<div id="foodBox">
-  <div class="slide_area">
+<article id="foodBox">
     <ul class="clearfix">
       <li class="img_01">
         <div></div>
@@ -21,30 +20,9 @@
         <div></div>
       </li>
     </ul>
-  </div>
-  </div>
-  <script>
-    (function($) {
-      var slideArea = $('.slide_area').children('ul');
-      slideArea.children().last().clone().appendTo(slideArea);
-      var slideLi = slideArea.children('li');
+  </article>
+  <script src="../js/src/b_2_foodBox.js"></script>
 
-
-      var autoSlide;
-      var goSlide = function(){ 
-        autoSlide = setInterval(function(){
-          slideLi.first().appendTo(slideArea);
-          slideLi = slideArea.children('li');
-        },3000);
-      };
-      var stopSlide = clearInterval(autoSlide);
-      
-      goSlide();
-
-      // slideLi.on({'mouseenter':goSlide,'mouseleave':stopSlide});
-
-    })(this.jQuery);
-  </script>
 
 
 

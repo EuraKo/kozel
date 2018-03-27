@@ -1,0 +1,74 @@
+/*c_2_history.scss*/
+#wrap { width: 100%; min-width: 960px; height: auto; margin: 0 auto; position: relative; }
+
+#headBox { width: 100%; height: auto; background-image: url("../img/wood.png"); background-repeat: no-repeat; background-position: center; background-size: cover; padding: 30px; box-sizing: border-box; position: relative; }
+
+#headBox h1 { width: 150px; height: 160px; float: left; background-image: url("../img/kozel_logo.png"); background-repeat: no-repeat; background-position: center; background-size: contain; }
+
+#headBox #gnbBox { width: 80%; float: right; position: absolute; bottom: 30px; right: -30px; }
+
+#headBox #gnbBox ul li { width: 120px; margin-right: 50px; float: left; font-family: "IM FELL Great Primer", arial; text-transform: uppercase; }
+
+#headBox #gnbBox ul li.franchiese { width: 200px; }
+
+#headBox #gnbBox ul li dl { height: auto; }
+
+#headBox #gnbBox ul li dl dt { font-style: italic; font-size: 30px; font-size: 1.875rem; text-shadow: 0 2px 4px #160000; }
+
+#headBox #gnbBox ul li dl .depth { display: none; position: absolute; left: -210px; z-index: 500; width: 960px; height: 120px; background-color: #ffffff; }
+
+#headBox #gnbBox ul li dl .depth dd { width: 200px; margin: auto; display: inline-block; text-align: center; line-height: 120px; }
+
+#headBox #gnbBox ul li:hover .depth { display: block; }
+
+#bigTitleBox { width: 100%; height: 600px; font-size: 48px; font-size: 3rem; color: #ffffff; font-family: "IM FELL Great Primer", arial; text-shadow: 0 2px 4px #160000; text-transform: uppercase; text-align: center; line-height: 600px; }
+
+#bigTitleBox h2 { font-size: inherit; }
+
+.introTit { background-image: url("../img/title/intro_title.png"); background-repeat: no-repeat; background-position: center; background-size: cover; }
+
+.hisroryTit { background-image: url("../img/title/history_title.png"); background-repeat: no-repeat; background-position: center; background-size: cover; }
+
+.menuTit { background-image: url("../img/title/beer_title.png"); background-repeat: no-repeat; background-position: center; background-size: cover; }
+
+#historyBox { padding: 90px; box-sizing: border-box; }
+
+#historyBox li { width: 100%; height: 400px; border-bottom: 3px dashed #d8d8d8; padding: 60px; box-sizing: border-box; }
+
+#historyBox li div { width: 40%; height: 270px; float: left; text-align: center; }
+
+#historyBox li div.his_text { float: right; }
+
+#historyBox li div.his_text dt { font-size: 48px; font-size: 3rem; color: #562D0D; margin-bottom: 30px; }
+
+.his_img_00 { background-image: url("../img/history/history_00.jpg"); background-repeat: no-repeat; background-position: center; background-size: cover; }
+
+.his_img_01 { background-image: url("../img/history/history_01.jpg"); background-repeat: no-repeat; background-position: center; background-size: cover; }
+
+.his_img_02 { background-image: url("../img/history/history_02.jpg"); background-repeat: no-repeat; background-position: center; background-size: cover; }
+
+.his_img_03 { background-image: url("../img/history/history_03.jpg"); background-repeat: no-repeat; background-position: center; background-size: cover; }
+
+.his_img_04 { background-image: url("../img/history/history_04.jpg"); background-repeat: no-repeat; background-position: center; background-size: cover; }
+
+.his_img_05 { background-image: url("../img/history/history_05.jpg"); background-repeat: no-repeat; background-position: center; background-size: cover; }
+
+.his_img_06 { background-image: url("../img/history/history_06.jpg"); background-repeat: no-repeat; background-position: center; background-size: cover; }
+
+.his_img_07 { background-image: url("../img/history/history_07.jpg"); background-repeat: no-repeat; background-position: center; background-size: cover; }
+
+.his_img_08 { background-image: url("../img/history/history_08.jpg"); background-repeat: no-repeat; background-position: center; background-size: cover; }
+
+.his_img_09 { background-image: url("../img/history/history_09.jpg"); background-repeat: no-repeat; background-position: center; background-size: cover; }
+
+#topBtn { width: 100%; height: 75px; }
+
+#topBtn a { background-image: url("../img/footer_arrow.png"); background-repeat: no-repeat; background-position: center; background-size: contain; }
+
+#footBox { width: 100%; height: auto; background-image: url("../img/wood.png"); background-repeat: no-repeat; background-position: center; background-size: cover; position: relative; }
+
+#footBox h2 { width: 115px; height: 54px; background-image: url("../img/flogo.png"); background-repeat: no-repeat; background-position: center; background-size: contain; position: absolute; bottom: 70px; right: 70px; }
+
+#footBox .text_area { padding: 70px; box-sizing: border-box; }
+
+#footBox .text_area p { margin-bottom: 20px; }

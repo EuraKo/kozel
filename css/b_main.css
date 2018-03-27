@@ -15,15 +15,19 @@
 
 #headBox #gnbBox ul li dl dt { font-style: italic; font-size: 30px; font-size: 1.875rem; text-shadow: 0 2px 4px #160000; }
 
-#headBox #gnbBox ul li dl .depth { display: none; position: absolute; left: -210px; width: 960px; height: 120px; background-color: #ffffff; }
+#headBox #gnbBox ul li dl .depth { display: none; position: absolute; left: -210px; z-index: 500; width: 960px; height: 120px; background-color: #ffffff; }
 
 #headBox #gnbBox ul li dl .depth dd { width: 200px; margin: auto; display: inline-block; text-align: center; line-height: 120px; }
 
 #headBox #gnbBox ul li:hover .depth { display: block; }
 
-#bannerBox { width: 100%; height: 600px; display: flex; justify-content: center; align-items: center; background-color: #ccc; }
+#bannerBox { width: 100%; height: auto; position: relative; }
 
-#bannerBox .play_btn { font-size: 120px; color: #ffffff; background-color: transparent; }
+#bannerBox .video_area { width: 100%; height: auto; overflow: hidden; }
+
+#bannerBox .video_area > .video_play { width: auto; height: auto; min-width: 100%; min-height: 100%; position: relative; top: 0; left: 50%; transform: translate(-50%); -webkit-object-fit: contain; -moz-object-fit: contain; -ms-object-fit: contain; -o-object-fit: contain; object-fit: contain; }
+
+#bannerBox .play_btn { position: absolute; top: 50%; left: 50%; margin-top: -60px; font-size: 120px; color: #ffffff; background-color: transparent; }
 
 #bannerBox .play_btn i { font-size: inherit; }
 
@@ -35,38 +39,21 @@
 
 #titleBox.main_02 h2 { color: #ffffff; }
 
-#foodBox { overflow-x: hidden; height: 800px; width: 100%; margin: 0 auto; }
+#foodBox { width: 100%; height: 100%; padding-top: 80px; padding-top: 5rem; }
 
-#foodBox .slide_area { margin: auto; }
+#foodBox ul { width: 80%; height: 700px; position: relative; margin: auto; -webkit-perspective: 300; }
 
-#foodBox .slide_area ul { width: 100%; height: 800px; animation: totar 15s infinite linear; -webkit-perspective: 1000; position: relative; }
+#foodBox li { width: 400px; height: 250px; position: absolute; top: 50%; left: 50%; background-color: #fff; border: 1px solid  #055; border-radius: 10px; box-shadow: 0 2px 4px #160000; margin-left: -150px; margin-top: -175px; text-align: center; line-height: 350px; font-size: 80px; font-size: 5rem; transition: all 2s linear; }
 
-#foodBox .slide_area ul li { width: 400px; height: 300px; position: absolute; background-color: #fff; top: 50%; left: 50%; margin-top: -150px; margin-left: -200px; border: 1px solid #979797; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); border-radius: 5px; transition: all 2s linear; }
+.img_01 { background-image: url("../img/newmenu/pic_newm01.png"); background-repeat: no-repeat; background-position: center; background-size: 60%; }
 
-#foodBox .slide_area ul li:nth-child(1) { z-index: 100; transform: scale(0.6) translate(-15rem, -15rem); }
+.img_02 { background-image: url("../img/newmenu/pic_newm02.png"); background-repeat: no-repeat; background-position: center; background-size: 60%; }
 
-#foodBox .slide_area ul li:nth-child(2) { z-index: 300; transform: scale(0.8) translate(-20rem, 0); }
+.img_03 { background-image: url("../img/newmenu/pic_newm03.png"); background-repeat: no-repeat; background-position: center; background-size: 60%; }
 
-#foodBox .slide_area ul li:nth-child(3) { z-index: 500; transform: scale(1) translate(0, 10rem); }
+.img_04 { background-image: url("../img/newmenu/pic_newm04.png"); background-repeat: no-repeat; background-position: center; background-size: 60%; }
 
-#foodBox .slide_area ul li:nth-child(4) { z-index: 300; transform: scale(0.8) translate(20rem, 0); }
-
-#foodBox .slide_area ul li:nth-child(5) { z-index: 100; transform: scale(0.6) translate(15rem, -15rem); }
-
-#foodBox .slide_area ul li:nth-child(6) { z-index: 10; transform: scale(0.6) translate(-15rem, -15rem); }
-
-.slide_area li.img_01 > div { width: 100%; height: 100%; background-image: url("../img/newmenu/pic_newm01.png"); background-repeat: no-repeat; background-position: center; background-size: 60%; }
-
-.slide_area li.img_02 > div { width: 100%; height: 100%; background-image: url("../img/newmenu/pic_newm02.png"); background-repeat: no-repeat; background-position: center; background-size: 60%; }
-
-.slide_area li.img_03 > div { width: 100%; height: 100%; background-image: url("../img/newmenu/pic_newm03.png"); background-repeat: no-repeat; background-position: center; background-size: 60%; }
-
-.slide_area li.img_04 > div { width: 100%; height: 100%; background-image: url("../img/newmenu/pic_newm04.png"); background-repeat: no-repeat; background-position: center; background-size: 60%; }
-
-.slide_area li.img_05 > div { width: 100%; height: 100%; background-image: url("../img/newmenu/pic_newm05.png"); background-repeat: no-repeat; background-position: center; background-size: 60%; }
-
-@keyframes rotar { 0% { transform: rotateY(0deg); }
-  100% { transform: rotateY(360deg); } }
+.img_05 { background-image: url("../img/newmenu/pic_newm05.png"); background-repeat: no-repeat; background-position: center; background-size: 60%; }
 
 #beerBox { width: 960px; height: auto; }
 
@@ -105,6 +92,10 @@
 #locationBox > div.other .store { background-image: url("../img/location/store.png"); background-repeat: no-repeat; background-position: center; background-size: cover; }
 
 #locationBox > div a { color: inherit; font-family: "IM FELL Great Primer", arial; text-transform: uppercase; font-size: 48px; font-size: 3rem; text-shadow: 0 2px 4px #160000; line-height: 34.375vw; /*33px*/ }
+
+#topBtn { width: 100%; height: 75px; }
+
+#topBtn a { background-image: url("../img/footer_arrow.png"); background-repeat: no-repeat; background-position: center; background-size: contain; }
 
 #footBox { width: 100%; height: auto; background-image: url("../img/wood.png"); background-repeat: no-repeat; background-position: center; background-size: cover; position: relative; }
 
