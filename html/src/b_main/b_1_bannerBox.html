@@ -4,11 +4,18 @@
     <!-- video -->
 <div class="video_area">
   <video class="video_play" type="video/mp4" controls preload loop autoplay>
-    <source src="../media/video/banner.mp4">
+    <source src="../media/video/banner.mp4" type="video/mp4" />
+    <p>ie is no!!!!!</p>
   </video>
 </div>
   <!-- btn -->
-    <button type="button" class="play_btn">
-      <i class="far fa-play-circle"></i>
-    </button>
+<div class="video_btn">
+  <button type="button" class="play_btn">
+    <span class="hidden">재생</span>
+  </button>  
+  <button type="button" class="pause_btn">
+    <span class="hidden">멈춤</span>
+  </button>
 </div>
+</div>
+<script src="../js/src/b_1_bannerBox.js"></script>

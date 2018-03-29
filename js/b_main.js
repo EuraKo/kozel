@@ -10,10 +10,12 @@ var myHtml = [
               {make:'footBox'         , load: 'all/footBox.html'}
 ];
 
-
+// var obj = {};
 for(var i = 0; i < myHtml.length; i++){
   ImportFile(myHtml[i].make, baseUrl+myHtml[i].load);
 };
+
+
 
 
 })(this.jQuery);

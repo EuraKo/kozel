@@ -9,14 +9,15 @@ function ImportFile(makeDivName,linkFile,wrapColorBoolean){
 
   var wrap=$('#wrap');
   var wrapDiv = wrap.append('<div class="'+makeDivName+'Wrap"></div>');
-  var select = $('.'+makeDivName+'Wrap');
+  var boxName = makeDivName+'Wrap';
+  var select = $('.'+boxName);
   select.load(linkFile,function(){
     var selectChild = select.children();
     selectChild.css({margin:'0 auto'});
-    var wrapColorBoo = wrapColorBoolean | true;
+    var wrapColorBoo = wrapColorBoolean;
 
 if(wrapColorBoo){
-  var selectColor = selectChild.css('backgroundColor');
+  var selectColor = $('#'+makeDivName).css('backgroundColor');
   select.css({backgroundColor:selectColor});
 }
 
