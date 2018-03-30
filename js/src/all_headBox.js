@@ -35,34 +35,36 @@ gnbWrap.on('mouseleave', function(){
   depth.stop().slideUp();
 });
 
+
+// ------------------------------------------
 // headBox 사라졌다 나타나기
 //주소불러오기 
 var lc = $(location).attr('href');
-var cut = lc.split('/');
-// console.log(cut.reverse()[0]);
+var cut = lc.split('/').reverse()[0];
 
-if(cut.reverse()[0] === 'b_main.html'){
 
-var headBox = $('#headBox');
+var ifTest = cut == 'b_main.html';
+console.log(cut, ifTest);
 
-var winH = $(window).outerHeight();
-// console.log(winH);
+if(ifTest){
+  var headBox = $('#headBox');
+  var winH = $(window).outerHeight();
+  // console.log(winH);
 
-headBox.hide();
-headBox.css({position:'fixed', zIndex:100});
+  headBox.hide();
+  headBox.css({position:'fixed', zIndex:100});
 
-$(window).on('scroll',function(){
-  var _this = $(this).scrollTop();
-  // console.log(_this);
-  if (_this >= winH) {
-    headBox.slideDown();
-    headBox.children('h1').css({backgroundImage:"url('../img/flogo.png')",height:'60px'});
-  }else{
-    headBox.slideUp();
-  }
-});
+  $(window).on('scroll',function(){
+    var _this = $(this).scrollTop();
+    // console.log(_this);
+    if (_this >= winH) {
+      headBox.slideDown();
+      headBox.children('h1').css({backgroundImage:"url('../img/flogo.png')",height:'60px'});
+    }else{
+      headBox.slideUp();
+    }
+  });
 }
-
 
 })(this.jQuery);
 
