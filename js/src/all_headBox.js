@@ -37,35 +37,8 @@ gnbWrap.on('mouseleave', function(){
 
 
 // ------------------------------------------
-// headBox 사라졌다 나타나기
-//주소불러오기 
-var lc = $(location).attr('href');
-var cut = lc.split('/').reverse()[0];
 
-
-var ifTest = cut == 'b_main.html';
-console.log(cut, ifTest);
-
-if(ifTest){
-  var headBox = $('#headBox');
-  var winH = $(window).outerHeight();
-  // console.log(winH);
-
-  headBox.hide();
-  headBox.css({position:'fixed', zIndex:100});
-
-  $(window).on('scroll',function(){
-    var _this = $(this).scrollTop();
-    // console.log(_this);
-    if (_this >= winH) {
-      headBox.slideDown();
-      headBox.children('h1').css({backgroundImage:"url('../img/flogo.png')",height:'60px'});
-    }else{
-      headBox.slideUp();
-    }
-  });
-}
-
+// 스크롤올리고 내리고 값은 all_headBox_rwd.js
 })(this.jQuery);
 
 

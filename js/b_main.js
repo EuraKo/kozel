@@ -15,7 +15,17 @@ for(var i = 0; i < myHtml.length; i++){
   ImportFile(myHtml[i].make, baseUrl+myHtml[i].load);
 };
 
+// 반응형불러오기
+var originWinWidth = $(window).width();
+  
+  $(window).on('resize',function() {
+    var resizeWinWidth = $(this).width();
+    var re = originWinWidth !== resizeWinWidth;
 
+    if(re){ location.reload(); }
+    // responsiveWeb();
+
+  });
 
 
 })(this.jQuery);

@@ -1,5 +1,6 @@
 // kozel js/src/b_1_bannerBox.js
 (function($){
+
 var bannerBox = $('#bannerBox');
 // 배너 올라가는 느낌
 $(window).on('scroll',function(){
@@ -23,4 +24,13 @@ pauseBtn.on('click',function(e){
   e.preventDefault();
   video[0].pause();
 });
+
+// 배너와 배너랩 높이값설정
+// var videoH = $('.video_area').height();
+// console.log(videoH);
+// bannerBox.height(videoH);
+// bannerBoxWrap.height(videoH);
+
+  
+
 })(this.jQuery);

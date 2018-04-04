@@ -1,5 +1,6 @@
 // kozel src/b_2_foodBox.js
  (function($) {
+  var pc = function(){
      var foodBox = $('#foodBox');
       var foodUl = foodBox.children('ul');
       var foodLi = foodUl.children('li');
@@ -36,5 +37,44 @@
         };
       
       },3000);
+}
+
+
+
+var originWinWidth = $(window).width();
+
+// =======================================
+
+var mob = function(){
+
+};
+
+var tablet = function(){
+
+};
+
+
+
+var full = function(){
+
+}
+// =======================================
+var responsiveWeb = function() {
+  if(originWinWidth < 481){
+    mob();
+  }else if (originWinWidth <= 768){
+    tablet();
+  }
+  else if(originWinWidth > 768){
+    pc();
+  }else if(originWinWidth >1366){
+    full();
+  }
+};
+
+responsiveWeb();
+
+
+
 
     })(this.jQuery);

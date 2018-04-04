@@ -1,6 +1,10 @@
 /*b_main.scss*/
 #wrap { width: 100%; min-width: 960px; height: auto; margin: 0 auto; position: relative; }
 
+@media screen and (max-width: 480px) { #wrap { min-width: 100%; max-width: 480px; } }
+
+@media screen and (min-width: 481px) and (max-width: 768px) { #wrap { min-width: 481px; max-width: 768px; } }
+
 #headBox { width: 100%; height: auto; background-color: #fff; background-image: url("../img/wood.jpg"); background-repeat: no-repeat; background-position: center; background-size: cover; padding: 30px; box-sizing: border-box; position: relative; }
 
 #headBox h1 { width: 150px; height: 160px; float: left; background-image: url("../img/kozel_logo.png"); background-repeat: no-repeat; background-position: center; background-size: contain; }
@@ -21,7 +25,26 @@
 
 #headBox #gnbBox ul li dl .depth div { display: inline-block; margin-right: 60px; text-align: center; line-height: 120px; }
 
-@media screen and (min-width: 481px) and (max-width: 768px) { #wrap { width: 100%; height: 100%; } }
+@media screen and (max-width: 480px) { #headBox .logo { margin-top: 10px; }
+  #headBox #gnbBox ul { padding: 30px; }
+  #headBox #gnbBox ul li dl dt { font-size: 1.25rem; }
+  #headBox #gnbBox ul li dl .depth div a { font-size: 1.25rem; } }
+
+@media screen and (max-width: 768px) { #headBox { width: 100%; height: 210px; }
+  #headBox .logo { background-image: url("../img/flogo.png"); }
+  #headBox #gnbBox { position: relative; left: 0; }
+  #headBox #gnbBox button { width: 60px; height: 55px; background-color: transparent; position: absolute; right: 30px; top: -50px; }
+  #headBox #gnbBox button .bar { display: block; width: 100%; height: 0; border-top: 5px solid #562D0D; transition: all 800ms ease; }
+  #headBox #gnbBox button .bar:before { content: " "; display: block; border-top: 5px solid #562D0D; margin-top: -25px; }
+  #headBox #gnbBox button .bar:after { content: " "; display: block; border-top: 5px solid #562D0D; margin-top: 35px; }
+  #headBox #gnbBox button .bar.active { width: 80%; border: 0; transform: rotateY(180deg); }
+  #headBox #gnbBox button .bar.active:before { transform: rotate(-45deg); }
+  #headBox #gnbBox button .bar.active:after { transform: rotate(45deg); margin-top: 25px; }
+  #headBox #gnbBox ul { width: 100%; height: 100vh; background-color: #ffffff; padding: 90px 30px; box-sizing: border-box; position: absolute; top: 66px; }
+  #headBox #gnbBox ul li { float: none; }
+  #headBox #gnbBox ul li dl dt { margin-bottom: 60px; }
+  #headBox #gnbBox ul li dl .depth { display: block; top: 0; width: 50vw; height: 100vh; background-color: #E5D9C4; }
+  #headBox #gnbBox ul li dl .depth div { display: inherit; height: 60px; text-align: right; font-size: 1.875rem; padding-top: 50px; box-sizing: border-box; margin-right: 30px; } }
 
 #bannerBox { width: 100%; height: auto; visibility: visible; }
 
@@ -45,13 +68,18 @@
 
 #titleBox.main_02 h2 { color: #ffffff; }
 
+@media screen and (max-width: 480px) { #titleBox h2 { font-size: 2.25rem; } }
+
+@media screen and (min-width: 1366px) { #titleBox { height: 270px; }
+  #titleBox h2 { height: 100%; display: flex; align-items: center; justify-content: center; } }
+
 .foodBoxWrap { position: relative; padding-top: 100vh; visibility: visible; }
 
 #foodBox { width: 100%; height: 100%; padding-top: 80px; padding-top: 5rem; background-color: #fff; background-image: url("../img/bg_kozel.png"); background-repeat: no-repeat; background-position: left bottom; background-size: 25%; }
 
-#foodBox ul { width: 80%; height: 700px; position: relative; margin: auto; -webkit-perspective: 300; }
+#foodBox ul { width: 80%; height: 700px; position: relative; margin: auto; -webkit-perspective: 300; -moz-perspective: 300; -ms-perspective: 300; -o-perspective: 300; perspective: 300; }
 
-#foodBox li { width: 400px; height: 250px; position: absolute; top: 50%; left: 50%; background-color: #fff; border: 1px solid  #055; border-radius: 10px; box-shadow: 0 2px 4px #160000; margin-left: -150px; margin-top: -175px; text-align: center; line-height: 350px; font-size: 80px; font-size: 5rem; transition: all 2s linear; }
+#foodBox li { width: 400px; height: 250px; position: absolute; top: 50%; left: 50%; background-color: #fff; border: 1px solid #E5D9C4; border-radius: 10px; box-shadow: 0 2px 4px #160000; margin-left: -150px; margin-top: -175px; text-align: center; line-height: 350px; font-size: 80px; font-size: 5rem; transition: all 2s linear; }
 
 .img_01 { background-image: url("../img/newmenu/pic_newm01.png"); background-repeat: no-repeat; background-position: center; background-size: 60%; }
 
@@ -63,9 +91,17 @@
 
 .img_05 { background-image: url("../img/newmenu/pic_newm05.png"); background-repeat: no-repeat; background-position: center; background-size: 60%; }
 
+@media screen and (max-width: 480px) { #foodBox ul { width: 100%; height: auto; }
+  #foodBox ul li { width: 85%; float: none; border: 0; box-shadow: 0 0 0 #fff; background-color: transparent; }
+  #foodBox ul li:nth-of-type(3), #foodBox ul li:nth-of-type(4) { display: none; } }
+
+@media screen and (max-width: 768px) { #foodBox ul { height: 500px; }
+  #foodBox li { width: 50%; height: 45%; position: relative; top: 0; left: 0; margin: 0 auto; float: left; box-sizing: border-box; }
+  #foodBox li:last-child { display: none; } }
+
 .beerBoxWrap { position: relative; background-color: #fff !important; padding-top: 60px; }
 
-#beerBox { width: 960px; height: auto; }
+#beerBox { width: 100vw; height: auto; }
 
 #beerBox ul li { width: 50%; height: 540px; float: left; }
 
@@ -79,6 +115,14 @@
 
 #beerBox li:nth-of-type(2) p { background-image: url("../img/beer02.png"); background-repeat: no-repeat; background-position: center; background-size: contain; }
 
+@media screen and (max-width: 480px) { #beerBox ul li { height: auto; float: none; margin: 0 auto; }
+  #beerBox ul li:first-child { margin-bottom: 60px; }
+  #beerBox ul li dl .beer_img { height: 200px; } }
+
+@media screen and (min-width: 1366px) { #beerBox ul { width: 50%; margin: 0 auto; }
+  #beerBox ul li { height: 600px; }
+  #beerBox ul li:last-child { float: right; } }
+
 #titleBox { width: 100%; background-color: #fff; background-image: url("../img/title/title.png"); background-repeat: no-repeat; background-position: center; background-size: cover; }
 
 #titleBox h2 { font-size: 48px; font-size: 3rem; text-align: center; }
@@ -86,6 +130,11 @@
 #titleBox.main_02 { background-image: url("../img/title/main_02.png"); background-repeat: no-repeat; background-position: center; background-size: 100% 100%; }
 
 #titleBox.main_02 h2 { color: #ffffff; }
+
+@media screen and (max-width: 480px) { #titleBox h2 { font-size: 2.25rem; } }
+
+@media screen and (min-width: 1366px) { #titleBox { height: 270px; }
+  #titleBox h2 { height: 100%; display: flex; align-items: center; justify-content: center; } }
 
 .locationBoxWrap { position: relative; }
 
@@ -105,14 +154,37 @@
 
 #locationBox > div a { color: inherit; font-family: "IM FELL Great Primer", arial; text-transform: uppercase; font-size: 48px; font-size: 3rem; text-shadow: 0 2px 4px #160000; line-height: 34.375vw; /*33px*/ }
 
+@media screen and (max-width: 480px) { .main_02 { display: none; }
+  #locationBox .franchise { position: relative; }
+  #locationBox .franchise:before { content: " "; display: block; width: 60px; height: 2px; position: absolute; bottom: -1px; left: 50%; margin-left: -30px; background-color: #555555; }
+  #locationBox .franchise > a { font-size: 2.25rem; }
+  #locationBox .other a { font-size: 2.25rem; }
+  #locationBox .menu { position: relative; }
+  #locationBox .menu:before { content: " "; display: block; width: 60px; height: 2px; position: absolute; bottom: -1px; left: 50%; margin-left: -30px; background-color: #555555; } }
+
+@media screen and (max-width: 768px) { #locationBox { height: auto; padding: 90px 0; }
+  #locationBox div { float: none; height: 300px; width: 100%; }
+  #locationBox div.franchise a { line-height: 300px; }
+  #locationBox div.other { height: 600px; }
+  #locationBox div.other div { height: 50%; }
+  #locationBox div.other div a { line-height: 300px; } }
+
 #topBtn { position: relative; background-color: #fff; width: 100%; height: 75px; }
 
 #topBtn a { background-image: url("../img/footer_arrow.png"); background-repeat: no-repeat; background-position: center; background-size: contain; }
 
-#footBox { width: 100%; height: auto; background-color: #fff; background-image: url("../img/wood.png"); background-repeat: no-repeat; background-position: center; background-size: cover; position: relative; }
+#footBox { width: 100%; height: auto; background-color: #fff; background-image: url("../img/wood_bk.jpg"); background-repeat: no-repeat; background-position: center; background-size: cover; position: relative; }
+
+#footBox:before { content: " "; display: block; width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
 
 #footBox h2 { width: 115px; height: 54px; background-image: url("../img/flogo.png"); background-repeat: no-repeat; background-position: center; background-size: contain; position: absolute; bottom: 70px; right: 70px; }
 
 #footBox .text_area { padding: 70px; box-sizing: border-box; }
 
-#footBox .text_area p { margin-bottom: 20px; }
+#footBox .text_area p { margin-bottom: 20px; color: #ffffff; }
+
+@media screen and (max-width: 480px) { #footBox { padding: 30px; box-sizing: border-box; }
+  #footBox h2 { position: relative; margin: 0 auto; bottom: 0; right: 0; margin-bottom: 30px; }
+  #footBox .text_area { padding: 0; }
+  #footBox .text_area p:first-child, #footBox .text_area p:nth-child(2), #footBox .text_area p:nth-child(3) { display: none; }
+  #footBox .text_area p:last-child { width: 100%; } }

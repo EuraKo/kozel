@@ -1,7 +1,11 @@
 /*a_adultBox.scss*/
 #wrap { width: 100%; min-width: 960px; height: auto; margin: 0 auto; position: relative; }
 
-#adultBox { width: 100%; height: 100%; background-image: url("../img/bg_adult.png"); background-repeat: no-repeat; background-position: center; background-size: cover; padding: 90px 0; padding: 5.625rem 0; }
+@media screen and (max-width: 480px) { #wrap { min-width: 100%; max-width: 480px; } }
+
+@media screen and (min-width: 481px) and (max-width: 768px) { #wrap { min-width: 481px; max-width: 768px; } }
+
+#adultBox { width: 100%; height: 100vh; background-image: url("../img/bg_adult.png"); background-repeat: no-repeat; background-position: center; background-size: cover; padding: 90px 0; padding: 5.625rem 0; }
 
 h1#logo { width: 304px; width: 19rem; height: 334px; height: 20.875rem; margin: 0 auto; background-image: url("../img/kozel_logo.png"); background-repeat: no-repeat; background-position: center; background-size: contain; }
 
@@ -11,13 +15,15 @@ form fieldset { width: 100%; height: auto; }
 
 form fieldset .age_area { margin-bottom: 30px; }
 
-form fieldset .age_area input { display: block; width: 620px; height: 90px; margin: 0 auto; background-color: transparent; margin-top: 30px; margin-top: 1.875rem; margin-bottom: 90px; margin-bottom: 5.625rem; }
+form fieldset .age_area input { display: block; width: 41.66667vw; height: 90px; height: 5.625rem; margin: 0 auto; background-color: transparent; margin-top: 30px; margin-top: 1.875rem; margin-bottom: 90px; margin-bottom: 5.625rem; -webkit-appearance: none; }
+
+form fieldset .age_area input[type="number"]::-webkit-outer-spin-button, form fieldset .age_area input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
 
 form fieldset .age_area input[placeholder] { font-size: 48px; font-size: 3rem; text-transform: uppercase; text-align: center; letter-spacing: 10px; }
 
 form fieldset .age_area label { display: block; text-align: center; }
 
-form fieldset .check_area { width: 160px; margin: 0 auto; }
+form fieldset .check_area { width: 160px; width: 10rem; margin: 0 auto; }
 
 form fieldset .check_area input { display: none; }
 
@@ -32,3 +38,11 @@ form fieldset .enter_area { width: 500px; height: 150px; margin: 0 auto; margin-
 form fieldset .enter_area a { position: absolute; top: 0; text-align: center; line-height: 150px; color: inherit; }
 
 form fieldset .enter_area a:after { display: inline-block; bottom: 0; left: 0; content: " "; width: 500px; height: 50%; border-radius: 0 0 20px 20px; background-color: #000000; opacity: 0.2; margin-top: -15%; position: absolute; }
+
+@media screen and (max-width: 768px) { #adultBox .enter_area { width: 280px; height: 90px; font-size: 2.25rem; }
+  #adultBox .enter_area a { line-height: 90px; }
+  #adultBox .enter_area a:after { width: 280px; } }
+
+@media screen and (min-width: 1366px) { #adultBox { height: 100vh; display: flex; align-items: center; justify-content: center; margin: 0 auto; }
+  #adultBox h1#logo { width: 35rem; height: 35rem; margin: 0; }
+  #adultBox form { width: 50%; } }
