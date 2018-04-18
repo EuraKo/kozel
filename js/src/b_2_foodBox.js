@@ -1,5 +1,9 @@
 // kozel src/b_2_foodBox.js
  (function($) {
+var mobSize     = 481;
+var tabSize     = 768;
+var pcSize      = 960;
+var pcfullSize  = 1366;
   var pc = function(){
      var foodBox = $('#foodBox');
       var foodUl = foodBox.children('ul');
@@ -60,14 +64,14 @@ var full = function(){
 }
 // =======================================
 var responsiveWeb = function() {
-  if(originWinWidth < 481){
+  if(originWinWidth < mobSize){
     mob();
-  }else if (originWinWidth <= 768){
+  }else if (originWinWidth <= tabSize){
     tablet();
-  }
-  else if(originWinWidth > 768){
+  }else if(originWinWidth > tabSize){
     pc();
-  }else if(originWinWidth >1366){
+  }
+  else if(originWinWidth  > pcfullSize){
     full();
   }
 };

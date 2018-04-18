@@ -7,7 +7,7 @@ var originWinWidth = $(window).width();
   var gnb     = $('#gnbBox');
   var gnbWrap = $('.gnb_wrap');
   var menu    = gnb.find('button');
-  var bar     = menu.find('.bar');
+  // var bar     = menu.find('.bar'); 모바일에서만 쓰이므로 하단으로 내림
   var gnbNav  = gnb.find('ul');
   var gnbDd   = gnb.find('dd');
   var gnbA    = gnb.find('dt').find('a');
@@ -67,6 +67,8 @@ var mob = function(){
   gnbWrap.css({height:"0", bottom:"66px"});
   gnbDd.hide();
   gnbA.removeAttr('href');
+  menu.append('<span class="bar">menu</span>');
+  var bar     = menu.find('.bar');
   menu.on('click',function(e){
     e.preventDefault();
     gnbNav.slideToggle();
@@ -102,6 +104,8 @@ var tablet = function(){
   gnbWrap.css({height:"0", bottom:"66px"});
   gnbDd.hide();
   gnbA.removeAttr('href');
+  menu.prepend('<span class="bar">menu</span>');
+  var bar     = menu.find('.bar');
   menu.on('click',function(e){
     e.preventDefault();
     gnbNav.slideToggle();

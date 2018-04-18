@@ -1,5 +1,9 @@
 // kozel js/src/b_1_bannerBox.js
 (function($){
+var mobSize     = 481;
+var tabSize     = 768;
+var pcSize      = 960;
+var pcfullSize  = 1366;
 
 var bannerBox = $('#bannerBox');
 // 배너 올라가는 느낌
@@ -12,8 +16,9 @@ $(window).on('scroll',function(){
 // 재생 정지버튼
 var video = bannerBox.find('.video_play');
 var videoSrc = bannerBox.find('source');
-var playBtn = $('.play_btn');
-var pauseBtn = $('.pause_btn');
+var videoBtn = $('.video_btn');
+var playBtn = videoBtn.children('.play_btn');
+var pauseBtn = videoBtn.children('.pause_btn');
 
 playBtn.on('click',function(e){
   e.preventDefault();
@@ -24,13 +29,54 @@ pauseBtn.on('click',function(e){
   e.preventDefault();
   video[0].pause();
 });
+// ====================================
 
-// 배너와 배너랩 높이값설정
-// var videoH = $('.video_area').height();
-// console.log(videoH);
-// bannerBox.height(videoH);
-// bannerBoxWrap.height(videoH);
+var originWinWidth = $(window).width();
+
+// =======================================
+
+var mob = function(){
+
+};
+
+var tablet = function(){
+  video.remove();
+  videoBtn.remove();
+  // $('.video_area').append('<img src="../img/kozel.png">');
+  $('.video_area').css({
+            backgroundImage:"url(../img/main.gif)",
+            backgroundRepeat:"no-repeat",
+            backgroundSize:"cover",
+            backgroundPosition:"center"
+          });
+
+};
+
+var pc = function(){
+
+};
+
+var full = function(){
+
+}
+// =======================================
+var responsiveWeb = function() {
+  if (originWinWidth <= tabSize){
+    tablet();
+  }else if(originWinWidth < mobSize){
+    mob();
+  }else if(originWinWidth > tabSize){
+    pc();
+  }
+  else if(originWinWidth  > pcfullSize){
+    full();
+  }
+};
+
+responsiveWeb();
 
   
+
+
 
 })(this.jQuery);
