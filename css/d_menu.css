@@ -67,6 +67,12 @@
 
 #menuBox ul.menu_pic li:nth-of-type(4) { background-image: url("../img/menu/menu_04.png"); background-repeat: no-repeat; background-position: center; background-size: contain; }
 
+@media screen and (max-width: 480px) { #menuBox ul { width: 100%; }
+  #menuBox ul.menu_pic { display: none; } }
+
+@media screen and (max-width: 768px) { #menuBox ul.menu_title { font-size: 1.875rem; }
+  #menuBox ul.menu_title li { margin-bottom: 6.51042vw; } }
+
 #topBtn { position: relative; background-color: #fff; width: 100%; height: 75px; }
 
 #topBtn a { background-image: url("../img/footer_arrow.png"); background-repeat: no-repeat; background-position: center; background-size: contain; }

@@ -57,13 +57,15 @@
 
 .menuTit { background-image: url("../img/title/beer_title.png"); background-repeat: no-repeat; background-position: center; background-size: cover; }
 
-#historyBox { padding: 90px; box-sizing: border-box; }
+#historyBox { max-width: 960px; padding: 90px; box-sizing: border-box; }
 
 #historyBox li { width: 100%; height: 400px; border-bottom: 3px dashed #d8d8d8; padding: 60px; box-sizing: border-box; }
 
-#historyBox li div { width: 40%; height: 270px; float: left; text-align: center; }
+#historyBox li:first-of-type { padding-top: 0; margin-bottom: 15px; }
 
-#historyBox li div.his_text { float: right; }
+#historyBox li div { width: 48%; height: 100%; float: left; text-align: center; }
+
+#historyBox li div.his_text { float: right; display: flex; align-items: center; }
 
 #historyBox li div.his_text dt { font-size: 48px; font-size: 3rem; color: #562D0D; margin-bottom: 30px; }
 
@@ -86,6 +88,13 @@
 .his_img_08 { background-image: url("../img/history/history_08.jpg"); background-repeat: no-repeat; background-position: center; background-size: cover; }
 
 .his_img_09 { background-image: url("../img/history/history_09.jpg"); background-repeat: no-repeat; background-position: center; background-size: cover; }
+
+@media screen and (max-width: 768px) { #historyBox { padding: 0px; }
+  #historyBox li:first-of-type { padding-top: 60px; }
+  #historyBox li { height: 100%; border-bottom: 0; padding-bottom: 15px; }
+  #historyBox li div { width: 100%; height: 50%; float: none; }
+  #historyBox li div:first-child { height: 267px; }
+  #historyBox li div.his_text { float: none; } }
 
 #topBtn { position: relative; background-color: #fff; width: 100%; height: 75px; }
 

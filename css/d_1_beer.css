@@ -57,11 +57,11 @@
 
 .menuTit { background-image: url("../img/title/beer_title.png"); background-repeat: no-repeat; background-position: center; background-size: cover; }
 
-#beerBox { width: 100vw; height: auto; margin: 0 auto; padding: 90px 120px; box-sizing: boeder-box; }
+#beerBox { width: 100%; max-width: 960px; height: auto; margin: 0 auto; padding: 90px 120px; box-sizing: border-box; }
 
-#beerBox .beer_area { width: 100vw; height: 300px; margin-bottom: 90px; }
+#beerBox .beer_area { width: 100%; height: 300px; margin-bottom: 90px; }
 
-#beerBox .beer_area div { width: 50vw; height: 100%; }
+#beerBox .beer_area div { width: 50%; height: 100%; }
 
 #beerBox .beer_area div.img { float: left; }
 
@@ -74,6 +74,15 @@
 #beerBox .beer_area div.beer_01 { background-image: url("../img/beer01.png"); background-repeat: no-repeat; background-position: center; background-size: contain; }
 
 #beerBox .beer_area div.beer_02 { background-image: url("../img/beer02.png"); background-repeat: no-repeat; background-position: center; background-size: contain; }
+
+@media screen and (max-width: 480px) { #beerBox { padding: 0; }
+  #beerBox .beer_area { height: auto; }
+  #beerBox .beer_area:first-of-type { margin-top: 14.58333vw; }
+  #beerBox .beer_area div { width: 100%; }
+  #beerBox .beer_area div.img { height: 300px; } }
+
+@media screen and (min-width: 481px) and (max-width: 768px) { #beerBox { padding: 11.71875vw 0; /*90px*/ }
+  #beerBox .beer_area div.text { padding-top: 0; } }
 
 #topBtn { position: relative; background-color: #fff; width: 100%; height: 75px; }
 
