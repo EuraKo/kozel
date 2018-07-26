@@ -57,15 +57,19 @@
 
 .menuTit { background-image: url("../img/title/beer_title.png"); background-repeat: no-repeat; background-position: center; background-size: cover; }
 
-#introduceBox { padding: 30px; box-sizing: border-box; }
+#introduceBox { width: 960px; padding: 30px; box-sizing: border-box; }
 
-#introduceBox .intro { width: 660px; height: 500px; margin-bottom: 90px; }
+#introduceBox .intro { width: 80%; margin-bottom: 90px; }
 
 #introduceBox .intro:nth-child(2) { float: right; text-align: right; }
 
 #introduceBox .intro img { width: 100%; height: 100%; margin-bottom: 30px; }
 
 #introduceBox .intro figcaption { display: block; }
+
+@media screen and (max-width: 768px) { #introduceBox { width: 100%; }
+  #introduceBox .intro { width: 100%; margin: 0 auto; margin-bottom: 90px; }
+  #introduceBox .intro:nth-child(2) { float: none; } }
 
 #titleBox { width: 100%; background-color: #fff; background-image: url("../img/title/title.png"); background-repeat: no-repeat; background-position: center; background-size: cover; }
 
@@ -80,13 +84,17 @@
 @media screen and (min-width: 1366px) { #titleBox { height: 270px; }
   #titleBox h2 { height: 100%; display: flex; align-items: center; justify-content: center; } }
 
-#videoBox { width: 100%; height: auto; padding: 60px; box-sizing: border-box; }
+#videoBox { width: 100%; max-width: 960px; height: auto; padding: 60px; box-sizing: border-box; }
 
 #videoBox ul { width: 100%; height: 100%; }
 
-#videoBox ul li { float: left; width: 40%; margin-right: 30px; margin-bottom: 30px; }
+#videoBox ul li { float: left; width: 48%; margin-right: 30px; margin-bottom: 30px; }
 
 #videoBox ul li:nth-of-type(2n) { float: right; }
+
+#videoBox video { width: 100%; }
+
+@media screen and (max-width: 768px) { .videoBoxWrap { display: none; } }
 
 #topBtn { position: relative; background-color: #fff; width: 100%; height: 75px; }
 
